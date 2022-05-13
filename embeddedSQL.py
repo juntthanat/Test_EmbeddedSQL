@@ -19,12 +19,12 @@ def selection2():
         for row in cur.execute('select * from house where price <= (select min(price) from house)'):
             print(row)
     elif(userInput == 3):
-        inputPrice = str(input("Input the Price"))
+        inputPrice = str(input("Input the Price: "))
         temp = "select * from house where price >= " + inputPrice
         for row in cur.execute(temp):
             print(row)
     elif(userInput == 4):
-        inputPrice = str(input("Input the Price"))
+        inputPrice = str(input("Input the Price: "))
         temp = "select * from house where price <= " + inputPrice
         for row in cur.execute(temp):
             print(row)
@@ -43,12 +43,12 @@ def selection3():
         for row in cur.execute('select * from house where floorspace <= (select min(floorspace) from house)'):
             print(row)
     elif(userInput == 3):
-        inputFloorSpace = str(input("Input the FloorSpace"))
+        inputFloorSpace = str(input("Input the FloorSpace: "))
         temp = "select * from house where floorspace >= " + inputFloorSpace
         for row in cur.execute(temp):
             print(row)
     elif(userInput == 4):
-        inputFloorSpace = str(input("Input the FloorSpace"))
+        inputFloorSpace = str(input("Input the FloorSpace: "))
         temp = "select * from house where floorspace <= " + inputFloorSpace
         for row in cur.execute(temp):
             print(row)
@@ -57,7 +57,7 @@ def selection3():
         exit()
 
 def selection4():
-    userInput = int(input("\n1.) First Letter 2.) City Name\n Selection: \n"))
+    userInput = int(input("\n1.) First Letter 2.) City Name\n Selection: "))
     if(userInput == 1):
         firstLetter = input("Please Enter the first letter of the city: ")
         if(len(firstLetter) == 1):
